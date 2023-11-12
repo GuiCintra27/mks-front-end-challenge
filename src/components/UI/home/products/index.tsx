@@ -1,9 +1,9 @@
 
 import { Product } from "./product";
 import { Container } from "./styles";
-import { ProductProps } from "@/models/product";
+import { ProductModel } from "@/models/product";
 
-export function Products({products}: {products: ProductProps[]}) {
+export function Products({products}: {products: ProductModel[]}) {
   return (
     <Container>
       {products.map((product) => (

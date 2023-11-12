@@ -7,7 +7,7 @@ import { ThemeProvider as ThemeProviderStyled } from "styled-components";
 import { darkTheme } from "./dark-theme";
 import { whiteTheme } from "./white-theme";
 import { useAppSelector } from "@/hooks/useAppSelector";
-import { ThemeType, setTheme } from "@/components/infra/storage/theme";
+import { ThemeType, setTheme } from "@/components/infra/storage/theme-slice";
 
 interface ThemeProviderProps {
   children: React.ReactNode;

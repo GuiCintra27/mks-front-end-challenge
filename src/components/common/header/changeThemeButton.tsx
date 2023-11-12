@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
 
-import { toggleTheme } from "@/components/infra/storage/theme";
+import { toggleTheme } from "@/components/infra/storage/theme-slice";
 
 export function ChangeThemeButton() {
   const dispatch = useDispatch();

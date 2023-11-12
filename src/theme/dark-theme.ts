@@ -12,4 +12,5 @@ export const darkTheme = {
     changeThemeButton: "#48B636",
   },
   borderWidth: "2px",
+  invert: 1,
 };

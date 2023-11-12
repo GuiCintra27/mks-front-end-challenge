@@ -1,9 +1,9 @@
 import Image from "next/image";
 
 import { ProductContainer } from "./styles";
-import { ProductProps } from "@/models/product";
+import { ProductModel } from "@/models/product";
 
-export function Product({ name, price, photo, description }: ProductProps) {
+export function Product({ name, price, photo, description }: ProductModel) {
   return (
     <ProductContainer>
       <img src={photo} alt={name} />

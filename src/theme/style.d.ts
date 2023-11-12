@@ -15,5 +15,6 @@ declare module "styled-components" {
       changeThemeButton: string
     };
     borderWidth: string;
+    invert: number;
   }
 }

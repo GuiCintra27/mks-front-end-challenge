@@ -12,4 +12,5 @@ export const whiteTheme = {
     changeThemeButton: "#E8E8EA",
   },
   borderWidth: "0px",
+  invert: 0,
 };

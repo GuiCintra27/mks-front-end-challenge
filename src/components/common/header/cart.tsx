@@ -1,9 +1,13 @@
 import Image from "next/image";
 import styled from "styled-components";
+import { useDispatch } from "react-redux";
+
+import { toggleCart } from "@/components/infra/storage/cart-slice";
 
 export function Cart() {
+  const dispatch = useDispatch();
   return (
-    <Container>
+    <Container onClick={() => dispatch(toggleCart())}>
       <Image src="/icons/cart-icon.svg" width={19} height={18} alt="Cart" />
       <span>0</span>
     </Container>
@@ -19,6 +23,7 @@ const Container = styled.div`
 
   border-radius: 0.8rem;
   background: #fff;
+  cursor: pointer;
 
   span {
     color: #000;
