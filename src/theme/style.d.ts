@@ -12,6 +12,7 @@ declare module "styled-components" {
       footer: string;
       onFooter: string;
       background: string;
+      changeThemeButton: string
     };
     borderWidth: string;
   }

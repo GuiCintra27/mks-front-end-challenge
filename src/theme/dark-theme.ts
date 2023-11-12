@@ -9,6 +9,7 @@ export const darkTheme = {
     footer: "#EEEEEE",
     onFooter: "#000",
     background: "#181A2A",
+    changeThemeButton: "#48B636",
   },
   borderWidth: "2px",
 };

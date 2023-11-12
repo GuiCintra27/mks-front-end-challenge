@@ -1,3 +1,4 @@
+import GlobalStyle from "@/global/globalStyle";
 import { ReduxProvider } from "@/lib/reduxProvider";
 import StyledComponentsRegistry from "@/lib/registry";
 import { ThemeProvider } from "@/theme/theme";
@@ -21,7 +22,10 @@ export default function RootLayout({
       <body className={mont_serrat.className}>
         <StyledComponentsRegistry>
           <ReduxProvider>
-            <ThemeProvider>{children}</ThemeProvider>
+            <ThemeProvider>
+              <GlobalStyle />
+              {children}
+            </ThemeProvider>
           </ReduxProvider>
         </StyledComponentsRegistry>
       </body>

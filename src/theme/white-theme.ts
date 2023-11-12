@@ -9,6 +9,7 @@ export const whiteTheme = {
     footer: "#EEEEEE",
     onFooter: "#000",
     background: "#F9F9F9",
+    changeThemeButton: "#E8E8EA",
   },
   borderWidth: "0px",
 };
