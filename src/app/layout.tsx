@@ -20,9 +20,9 @@ export default function RootLayout({
     <html lang="pt-br">
       <body className={mont_serrat.className}>
         <StyledComponentsRegistry>
-          <ThemeProvider>
-            <ReduxProvider>{children}</ReduxProvider>
-          </ThemeProvider>
+          <ReduxProvider>
+            <ThemeProvider>{children}</ThemeProvider>
+          </ReduxProvider>
         </StyledComponentsRegistry>
       </body>
     </html>
