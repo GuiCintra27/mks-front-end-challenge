@@ -32,7 +32,7 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
         })
       );
     }
-  }, []);
+  });
 
   return (
     <ThemeProviderStyled theme={themes[theme]}>{children}</ThemeProviderStyled>
