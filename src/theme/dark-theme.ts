@@ -10,6 +10,10 @@ export const darkTheme = {
     onFooter: "#000",
     background: "#181A2A",
     changeThemeButton: "#48B636",
+    loading: {
+      primary: "#7c7d85",
+      secondary: "#b6b6bd",
+    }
   },
   borderWidth: "2px",
   invert: 1,

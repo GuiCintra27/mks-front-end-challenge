@@ -13,6 +13,10 @@ declare module "styled-components" {
       onFooter: string;
       background: string;
       changeThemeButton: string
+      loading: {
+        primary: string;
+        secondary: string;
+      }
     };
     borderWidth: string;
     invert: number;

@@ -10,6 +10,10 @@ export const whiteTheme = {
     onFooter: "#000",
     background: "#F9F9F9",
     changeThemeButton: "#E8E8EA",
+    loading: {
+      primary: "#f2f2f2",
+      secondary: "#d9d9d9",
+    }
   },
   borderWidth: "0px",
   invert: 0,
