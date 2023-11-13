@@ -54,13 +54,15 @@ export function finalizePurchase({
   dispatch: Dispatch<AnyAction>;
   products: Pick<ProductModel, "id" | "name" | "price" | "photo">[];
 }) {
-  if(products.length === 0) return;
+  if (products.length === 0) return;
 
   confirmAlert("Tem certeza?", "A compra será finalizada", {
     confirm: "Continuar",
     cancel: "Cancelar",
   }).then((response) => {
-    if (response.isConfirmed) dispatch(clearCart());
-    successToast("Sua compra foi finalizada com sucesso");
+    if (response.isConfirmed) {
+      dispatch(clearCart());
+      successToast("Sua compra foi finalizada com sucesso");
+    }
   });
 }
