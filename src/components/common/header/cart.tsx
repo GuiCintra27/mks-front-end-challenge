@@ -2,14 +2,17 @@ import Image from "next/image";
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
 
+import { useAppSelector } from "@/hooks/useAppSelector";
 import { toggleCart } from "@/components/infra/storage/cart-slice";
 
 export function Cart() {
+  const {products} = useAppSelector((state) => state.cart);
   const dispatch = useDispatch();
+  
   return (
     <Container onClick={() => dispatch(toggleCart())}>
       <Image src="/icons/cart-icon.svg" width={19} height={18} alt="Cart" />
-      <span>0</span>
+      <span>{products.length}</span>
     </Container>
   );
 }
