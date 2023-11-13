@@ -3,6 +3,7 @@
 import { useQuery } from "@tanstack/react-query";
 
 import * as api from "@/services/productsApi";
+import { timeUntilTheNextDay } from "@/utils/dateUtil";
 
 export function useProductsApi() {
   const {
@@ -12,7 +13,7 @@ export function useProductsApi() {
   } = useQuery({
     queryKey: ["products-list"],
     queryFn: api.getProducts,
-    staleTime: 1000 * 60 * 60,
+    staleTime: timeUntilTheNextDay(),
   });
 
   return {
