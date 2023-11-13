@@ -23,6 +23,10 @@ const GlobalStyle = createGlobalStyle`
   a {
     color: inherit;
   }
+
+  .sweet-toast{
+    font-size: 1.35rem;
+  }
 `;
 
 export default GlobalStyle;

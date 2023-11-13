@@ -1,8 +1,8 @@
 import { AnyAction, Dispatch } from "redux";
 
 import { ProductModel } from "@/models/product";
-import { confirmAlert } from "@/components/UI/alerts";
-import { insertItem, removeItem } from "../storage/cart-slice";
+import { confirmAlert, successToast } from "@/components/UI/alerts";
+import { clearCart, insertItem, removeItem } from "../storage/cart-slice";
 
 export function addOnCart({
   dispatch,
@@ -45,4 +45,22 @@ export function removeFromCart({
       }
     });
   } else dispatch(removeItem({ id }));
+}
+
+export function finalizePurchase({
+  dispatch,
+  products,
+}: {
+  dispatch: Dispatch<AnyAction>;
+  products: Pick<ProductModel, "id" | "name" | "price" | "photo">[];
+}) {
+  if(products.length === 0) return;
+
+  confirmAlert("Tem certeza?", "A compra será finalizada", {
+    confirm: "Continuar",
+    cancel: "Cancelar",
+  }).then((response) => {
+    if (response.isConfirmed) dispatch(clearCart());
+    successToast("Sua compra foi finalizada com sucesso");
+  });
 }

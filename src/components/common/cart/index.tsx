@@ -4,9 +4,10 @@ import Image from "next/image";
 import { useDispatch } from "react-redux";
 
 import { Container } from "./styles";
+import { CartProduct } from "./product";
+import { FinalizePurchase } from "./finalize-purchase";
 import { useAppSelector } from "@/hooks/useAppSelector";
 import { toggleCart } from "@/components/infra/storage/cart-slice";
-import { CartProduct } from "./product";
 
 export function Cart() {
   const { isActive, products } = useAppSelector((state) => state.cart);
@@ -48,6 +49,7 @@ export function Cart() {
           )}
         </span>
       </div>
+      <FinalizePurchase products={products}/>
     </Container>
   );
 }
