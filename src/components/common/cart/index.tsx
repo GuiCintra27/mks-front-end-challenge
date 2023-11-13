@@ -14,7 +14,6 @@ export function Cart() {
 
   if (!isActive) return null;
 
-
   return (
     <Container>
       <div className="title-wrapper">
@@ -41,7 +40,13 @@ export function Cart() {
       </div>
       <div className="total">
         <span>Total</span>
-        <span>R$ {products.reduce((acc, product) => acc + product.price, 0)}</span>
+        <span>
+          R${" "}
+          {products.reduce(
+            (acc, product) => acc + product.price * product.quantity,
+            0
+          )}
+        </span>
       </div>
     </Container>
   );
