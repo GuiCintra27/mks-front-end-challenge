@@ -24,12 +24,14 @@ export function removeFromCart({
   dispatch,
   id,
   quantity,
+  removeAll,
 }: {
   dispatch: Dispatch<AnyAction>;
   id: number;
   quantity: number;
+  removeAll?: boolean;
 }) {
-  if (quantity === 1) {
+  if (quantity === 1 || removeAll) {
     confirmAlert(
       "Você tem certeza?",
       "Este produto será removido do carrinho",
@@ -39,7 +41,7 @@ export function removeFromCart({
       }
     ).then((response) => {
       if (response.isConfirmed) {
-        dispatch(removeItem({ id }));
+        dispatch(removeItem({ id, removeAll }));
       }
     });
   } else dispatch(removeItem({ id }));

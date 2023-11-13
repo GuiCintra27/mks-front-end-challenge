@@ -40,16 +40,16 @@ export const CartSlice = createSlice({
     },
     removeItem: (
       state,
-      action: PayloadAction<ProductModel | Pick<ProductModel, "id">>
+      action: PayloadAction<(ProductModel | Pick<ProductModel, "id">) & { removeAll?: boolean }>
     ) => {
-      const { id } = action.payload;
+      const { id, removeAll } = action.payload;
       let listId = -1;
 
       state.products.map((product, index) => {
         if (product.id === id) listId = index;
       });
 
-      if (state.products[listId].quantity === 1) {
+      if (state.products[listId].quantity === 1 || removeAll) {
         state.products = state.products.filter((product) => product.id !== id);
       } else {
         state.products[listId].quantity -= 1;

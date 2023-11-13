@@ -37,6 +37,8 @@ export const Container = styled.div`
 
   .products-list {
     margin: 0 5.4rem 3rem 4.7rem;
+    padding-top: 1rem;
+    padding-right: 1rem;
     height: 60%;
     overflow-y: scroll;
 

@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  position: relative;
+
   padding: 1.9rem 2.3rem;
   width: 100%;
   height: 9.5rem;
@@ -14,6 +16,15 @@ export const Container = styled.div`
   box-shadow: -2px 2px 10px 0px rgba(0, 0, 0, 0.05);
   color: ${({ theme }) => theme.colors.onPrimary};
 
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    transform: translate(50%, -50%);
+    cursor: pointer;
+  }
+
   .description {
     display: flex;
     gap: 2rem;
@@ -23,7 +34,7 @@ export const Container = styled.div`
       width: 7rem;
       max-height: 6rem;
 
-      border-radius: .8rem;
+      border-radius: 0.8rem;
     }
 
     h3 {

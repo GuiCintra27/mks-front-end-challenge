@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useDispatch } from "react-redux";
 
 import { ProductModel } from "@/models/product";
@@ -19,6 +20,16 @@ export function CartProduct({
 
   return (
     <Container>
+      <Image
+        onClick={() =>
+          removeFromCart({ dispatch, id, quantity, removeAll: true })
+        }
+        className="close"
+        src={"icons/close-cart-icon.svg"}
+        width={18}
+        height={18}
+        alt={"Remover Produto"}
+      />
       <div className="description">
         <img src={photo} />
         <h3>{name}</h3>
