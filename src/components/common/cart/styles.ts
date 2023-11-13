@@ -37,10 +37,29 @@ export const Container = styled.div`
 
   .products-list {
     margin: 0 5.4rem 3rem 4.7rem;
+    height: 60%;
+    overflow-y: scroll;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
     gap: 2.2rem;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .total {
+    margin: 0 5.4rem 4rem 4.7rem;
+    width: calc(100% - 10rem);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: #fff;
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.5rem; /* 53.571% */
   }
 `;

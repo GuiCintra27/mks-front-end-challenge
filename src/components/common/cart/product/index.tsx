@@ -1,12 +1,22 @@
+"use client";
+
+import { useDispatch } from "react-redux";
+
 import { ProductModel } from "@/models/product";
 import { Container, QuantityWrapper } from "./styles";
+import { addOnCart, removeFromCart } from "@/components/infra/fetch-logic/cart";
 
 export function CartProduct({
+  id,
   name,
   photo,
   price,
   quantity,
-}: Pick<ProductModel, "name" | "photo" | "price"> & { quantity: number }) {
+}: Pick<ProductModel, "id" | "name" | "photo" | "price"> & {
+  quantity: number;
+}) {
+  const dispatch = useDispatch();
+
   return (
     <Container>
       <div className="description">
@@ -16,11 +26,19 @@ export function CartProduct({
       <QuantityWrapper>
         <span>Qtd:</span>
         <div className="button">
-          <span>-</span>
+          <span onClick={() => removeFromCart({ dispatch, id, quantity })}>
+            -
+          </span>
           <div className="separator" />
           <div>{quantity}</div>
           <div className="separator" />
-          <span>+</span>
+          <span
+            onClick={() =>
+              addOnCart({ dispatch, productData: { id, name, photo, price } })
+            }
+          >
+            +
+          </span>
         </div>
       </QuantityWrapper>
       <p className="price">R$ {price}</p>

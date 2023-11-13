@@ -20,14 +20,14 @@ export const Container = styled.div`
     align-items: center;
 
     img {
-      max-width: 7rem;
+      width: 7rem;
       max-height: 6rem;
 
       border-radius: .8rem;
     }
 
     h3 {
-      max-width: 8.5rem;
+      width: 8.5rem;
       word-wrap: break-word;
 
       font-size: 1.3rem;

@@ -9,10 +9,11 @@ import { toggleCart } from "@/components/infra/storage/cart-slice";
 import { CartProduct } from "./product";
 
 export function Cart() {
+  const { isActive, products } = useAppSelector((state) => state.cart);
   const dispatch = useDispatch();
-  const { isActive } = useAppSelector((state) => state.cart);
 
   if (!isActive) return null;
+
 
   return (
     <Container>
@@ -27,12 +28,20 @@ export function Cart() {
         />
       </div>
       <div className="products-list">
-        <CartProduct
-          name="Macbook Air"
-          price={8200.0}
-          quantity={1}
-          photo="https://mks-sistemas.nyc3.digitaloceanspaces.com/products/macbookair.webp"
-        />
+        {products.map((product) => (
+          <CartProduct
+            id={product.id}
+            name={product.name}
+            price={product.price * product.quantity}
+            quantity={product.quantity}
+            photo={product.photo}
+            key={product.id}
+          />
+        ))}
+      </div>
+      <div className="total">
+        <span>Total</span>
+        <span>R$ {products.reduce((acc, product) => acc + product.price, 0)}</span>
       </div>
     </Container>
   );
