@@ -34,7 +34,7 @@ export const CartSlice = createSlice({
         state.products[repeatedId].quantity += 1;
       } else
         state.products = [
-          { id, name, price, photo, quantity: 1 },
+          { id, name, price: Number(price), photo, quantity: 1 },
           ...state.products,
         ];
     },

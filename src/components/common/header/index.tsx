@@ -10,6 +10,7 @@ export function Header() {
   return (
     <Container>
       <Image
+        priority
         id="logo"
         src="/logo/logo-extended.svg"
         width={186}

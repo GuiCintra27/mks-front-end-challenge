@@ -1,14 +1,18 @@
+"use client";
+
 import { Product } from "./product";
 import { Container } from "./styles";
-import { ProductModel } from "@/models/product";
 import { ProductLoading } from "./productLoading";
+import { useProductsApi } from "@/hooks/api/products";
 
-export function Products({ products }: { products: ProductModel[] }) {
+export function Products() {
+  const { products, isLoading, isError } = useProductsApi();
+
   return (
     <Container>
-      {!products || products.length === 0
+      {isLoading
         ? new Array(8).fill(0).map((_, index) => <ProductLoading key={index} />)
-        : products.map((product) => <Product {...product} key={product.id} />)}
+        : products?.map((product) => <Product {...product} key={product.id} />)}
     </Container>
   );
 }

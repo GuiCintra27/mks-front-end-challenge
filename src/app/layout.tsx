@@ -1,9 +1,11 @@
+import type { Metadata } from "next";
+import { Montserrat } from "next/font/google";
+
+import { ThemeProvider } from "@/theme/theme";
 import GlobalStyle from "@/global/globalStyle";
 import { ReduxProvider } from "@/lib/reduxProvider";
 import StyledComponentsRegistry from "@/lib/registry";
-import { ThemeProvider } from "@/theme/theme";
-import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { QueryClientProvider } from "@/lib/queryClientProvider";
 
 const mont_serrat = Montserrat({ subsets: ["latin"] });
 
@@ -20,14 +22,16 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={mont_serrat.className}>
-        <StyledComponentsRegistry>
-          <ReduxProvider>
-            <ThemeProvider>
-              <GlobalStyle />
-              {children}
-            </ThemeProvider>
-          </ReduxProvider>
-        </StyledComponentsRegistry>
+        <QueryClientProvider>
+          <StyledComponentsRegistry>
+            <ReduxProvider>
+              <ThemeProvider>
+                <GlobalStyle />
+                {children}
+              </ThemeProvider>
+            </ReduxProvider>
+          </StyledComponentsRegistry>
+        </QueryClientProvider>
       </body>
     </html>
   );
