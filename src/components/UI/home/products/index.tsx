@@ -2,11 +2,14 @@
 
 import { Product } from "./product";
 import { Container } from "./styles";
+import { errorToast } from "../../alerts";
 import { ProductLoading } from "./productLoading";
 import { useProductsApi } from "@/hooks/api/products";
 
 export function Products() {
   const { products, isLoading, isError } = useProductsApi();
+
+  if(isError) errorToast("Ocorreu um erro ao carregar os produtos");
 
   return (
     <Container>

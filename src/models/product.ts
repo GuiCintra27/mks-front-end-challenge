@@ -4,7 +4,7 @@ export interface ProductModel {
   brand: string;
   description: string;
   photo: string;
-  price: string;
+  price: string | number;
   createdAt: string;
   updatedAt: string;
 }
