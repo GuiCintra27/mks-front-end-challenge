@@ -11,7 +11,7 @@ export function Product(productData: ProductModel) {
       <main>
         <h3>{productData.name}</h3>
         <div className="price-wrapper">
-          <span>R$ {productData.price.slice(0, -3)}</span>
+          <span>R$ {productData.price.toString().slice(0, -3)}</span>
         </div>
       </main>
       <p>{productData.description}</p>
