@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Cart When an item is removed If was the last item, an alert should appear 1`] = `
+<h2
+  class="swal2-title"
+  id="swal2-title"
+  style="display: block;"
+>
+  Você tem certeza?
+</h2>
+`;

@@ -37,13 +37,13 @@ export function CartProduct({
       <QuantityWrapper>
         <span>Qtd:</span>
         <div className="button">
-          <span onClick={() => removeFromCart({ dispatch, id, quantity })}>
+          <span data-testid={`decrease-button-${id}`} onClick={() => removeFromCart({ dispatch, id, quantity })}>
             -
           </span>
           <div className="separator" />
           <div>{quantity}</div>
           <div className="separator" />
-          <span
+          <span data-testid="increase-button"
             onClick={() =>
               addOnCart({ dispatch, productData: { id, name, photo, price } })
             }

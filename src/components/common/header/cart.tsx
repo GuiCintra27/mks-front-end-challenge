@@ -12,7 +12,7 @@ export function Cart() {
   return (
     <Container onClick={() => dispatch(toggleCart())}>
       <Image src="/icons/cart-icon.svg" width={19} height={18} alt="Cart" />
-      <span>{products.length}</span>
+      <span data-testid="cart-items-count">{products.length}</span>
     </Container>
   );
 }
