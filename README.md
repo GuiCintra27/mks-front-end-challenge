@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Versão brasileira 🇧🇷
 
-## Getting Started
+Projeto desenvolvido para o teste técnico da MKS
 
-First, run the development server:
+### Página Inicial
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<div style="display: inline_block">
+  <img src="./public/preview/home-default.png" width="600"/> 
+  <img src="./public/preview/home-open-cart.png" width="600"/>   
+</div>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Modo Noturno
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<div style="display: inline_block">
+  <img src="./public/preview/home-dark-theme.png" width="600"/> 
+  <img src="./public/preview/home-open-cart-dark-theme.png" width="600"/>   
+</div>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Animação de Carregamento
 
-## Learn More
+<div style="display: inline_block">
+  <img src="./public/preview/home-loading.png" width="600"/> 
+</div>
 
-To learn more about Next.js, take a look at the following resources:
+Disponível em: https://mks-front-end-challenge1.vercel.app/
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Sobre o Projeto
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Projeto desenvolvido para o teste técnico de front-end da MKS
 
-## Deploy on Vercel
+Abaixo segue a lista de algumas das funcionalidades implementadas:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Conceitos de SSR (para otimizar a experiência do usuário que estiver utilizando o site, bem como mecanismos de busca- SEO) e CSR
+- Redux para compartilhamento dos dados entre componentes
+- React Query para gerenciamento de dados assíncronos e comunicação com API
+- Cacheamento de dados
+- Mudança de tema utilizando o ThemeProvider do Styled-Components
+- Requisições com Axios
+- Skeleton Loading
+- Testes unitários utilizando a React Testing Library e Jest
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Tecnologias
+
+Abaixo seguem as ferramentas e frameworks utilizados no projeto: <br/>
+
+<div style="display: inline_block"> 
+  <img alt="Gui-Next" height="30" src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white">
+  <img alt="Gui-React" height="30" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB">
+  <img alt="Gui-Redux" height="30" src="https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white">
+  <img alt="Gui-React-Query" height="30" src="https://img.shields.io/badge/-React%20Query-FF4154?style=for-the-badge&logo=react%20query&logoColor=white">
+  <img alt="Gui-Axios" height="30" src="https://img.shields.io/badge/axios-671ddf?&style=for-the-badge&logo=axios&logoColor=white">
+  <img alt="Gui-Jest" height="30" src="https://img.shields.io/badge/Jest-323330?style=for-the-badge&logo=Jest&logoColor=white">
+  <img alt="Gui-React-Testing-Library" height="30" src="https://img.shields.io/badge/testing%20library-323330?style=for-the-badge&logo=testing-library&logoColor=red">  
+  <img alt="Gui-Ts" height="30" src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white">
+  <img alt="Gui-Styled-Components" height="30" src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white">  
+  <img alt="Gui-Figma" height="30" src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white">
+</div>
